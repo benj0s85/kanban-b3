@@ -43,5 +43,7 @@ jobs:
 
 ## 5. Gestion des secrets et validations avant mise en production
 Pour garantir la sécurité de l'application, aucun secret n'est stocké en clair dans le pipeline :
+
 **Gestion des secrets :** Les variables sensibles (`MONGODB_URI`, `JWT_SECRET`) sont stockées de manière chiffrée dans les secrets du dépôt (ex: GitHub Secrets) et injectées dynamiquement lors de l'exécution.
+
 **Validations :** Le déploiement ne peut avoir lieu que si les tests d'intégration sont au vert et après une validation manuelle (revue de code) sur la Pull Request.
